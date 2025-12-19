@@ -1,6 +1,6 @@
 dependencies {
-    // Vulnerable dependency with dynamic version
-    testImplementation "junit:junit:4.+"
+    // Vulnerable dependency with concrete old version
+    testImplementation "junit:junit:4.7"
     
     // Another vulnerable dependency
     implementation "commons-io:commons-io:2.5"
