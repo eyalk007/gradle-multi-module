@@ -1,7 +1,11 @@
+plugins {
+    id 'java'
+}
+
 dependencies {
     // Same vulnerable dependency with concrete old version
-    testImplementation "junit:junit:4.7"
+    testImplementation 'junit:junit:4.7'
     
     // Different version of the same library
-    implementation "commons-io:commons-io:2.6"
+    implementation 'commons-io:commons-io:2.6'
 }

@@ -1,7 +1,11 @@
+plugins {
+    id 'java'
+}
+
 dependencies {
     // Vulnerable dependency with concrete old version
-    testImplementation "junit:junit:4.7"
+    testImplementation 'junit:junit:4.7'
     
     // Another vulnerable dependency
-    implementation "commons-io:commons-io:2.5"
+    implementation 'commons-io:commons-io:2.5'
 }
