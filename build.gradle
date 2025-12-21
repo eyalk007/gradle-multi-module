@@ -14,5 +14,5 @@ repositories {
 dependencies {
     // Test MAP FORMAT - both exact and dynamic versions
     testImplementation group: "junit", name: "junit", version: "4.+"
-    implementation group: "commons-io", name: "commons-io", version: "2.5"
+    implementation group: "commons-io", name: "commons-io", version: "2.14.0"
 }
