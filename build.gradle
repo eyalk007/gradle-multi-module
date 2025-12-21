@@ -12,8 +12,7 @@ repositories {
 }
 
 dependencies {
-    // Test: Scanner sees 4.7 in lockfile, but build.gradle has dynamic 4.+
-    // Our code should handle replacing 4.+ with fixed version
-    testImplementation 'junit:junit:4.+'
-    implementation 'commons-io:commons-io:2.5'
+    // Test MAP FORMAT - both exact and dynamic versions
+    testImplementation group: "junit", name: "junit", version: "4.+"
+    implementation group: "commons-io", name: "commons-io", version: "2.5"
 }
