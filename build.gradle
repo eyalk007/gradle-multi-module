@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    // Vulnerable dependencies with concrete versions
-    testImplementation 'junit:junit:4.7'
-    implementation 'commons-io:commons-io:2.5'
+    // Vulnerable dependencies with DYNAMIC versions (testing 4.+)
+    testImplementation 'junit:junit:4.+'
+    implementation 'commons-io:commons-io:2.+'
 }
