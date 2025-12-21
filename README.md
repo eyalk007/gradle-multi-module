@@ -1,4 +1,4 @@
-# Gradle Multi-Module Test Project
+# Gradle Single-Module Test Project
 
 This is a test project for Frogbot's Gradle package handler.
 
@@ -6,28 +6,21 @@ This is a test project for Frogbot's Gradle package handler.
 
 ```
 gradle-multi-module/
-├── settings.gradle           # Defines modules
-├── build.gradle              # Root build config
-├── app/
-│   ├── build.gradle          # App module dependencies (junit:junit:4.+)
-│   └── src/main/java/...
-└── core/
-    ├── build.gradle          # Core module dependencies (junit:junit:4.+)
-    └── src/main/java/...
+├── build.gradle              # Single module with dependencies
+├── gradlew                   # Gradle wrapper
+└── src/main/java/...
 ```
 
 ## Purpose
 
-Tests if Frogbot reports vulnerabilities separately for each module, or aggregated.
+Tests if Frogbot can detect and fix vulnerabilities in a single-module Gradle project.
 
 ## Vulnerable Dependencies
 
-Both modules contain:
-- `junit:junit:4.+` (dynamic version, old vulnerable version)
-- Different versions of `commons-io` (potentially vulnerable)
+- `junit:junit:4.7` (old vulnerable version)
+- `commons-io:commons-io:2.5` (potentially vulnerable)
 
-## Test Questions
+## Testing
 
-1. Does scan report junit vulnerability once or twice (once per module)?
-2. Does UpdateDependency get called once or twice?
-3. Is the file path included in vulnerability details?
+This is a simplified single-module project (was previously multi-module).
+Testing dependency scanning and vulnerability fixing.

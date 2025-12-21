@@ -1,5 +1,0 @@
-# This is a Gradle generated file for dependency locking.
-# Manual edits can break the build. This file is expected to be part of source control.
-commons-io:commons-io:2.6=compileClasspath
-junit:junit:4.7=compileClasspath
-org.hamcrest:hamcrest-core:1.1=compileClasspath

@@ -7,12 +7,12 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-allprojects {
-    repositories {
-        mavenCentral()
-    }
+repositories {
+    mavenCentral()
 }
 
-subprojects {
-    apply plugin: 'java'
+dependencies {
+    // Vulnerable dependencies with concrete versions
+    testImplementation 'junit:junit:4.7'
+    implementation 'commons-io:commons-io:2.5'
 }
