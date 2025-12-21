@@ -15,5 +15,5 @@ dependencies {
     // Test: Scanner sees 4.7 in lockfile, but build.gradle has dynamic 4.+
     // Our code should handle replacing 4.+ with fixed version
     testImplementation 'junit:junit:4.+'
-    implementation 'commons-io:commons-io:2.5'
+    implementation 'commons-io:commons-io:2.14.0'
 }
