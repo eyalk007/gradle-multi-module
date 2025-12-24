@@ -1,26 +1,26 @@
-# Gradle Single-Module Test Project
+# Gradle Multi-Project Test for Frogbot
 
-This is a test project for Frogbot's Gradle package handler.
+This repository contains two **separate** Gradle projects to test Frogbot's multi-target handling.
 
 ## Structure
 
 ```
-gradle-multi-module/
-├── build.gradle              # Single module with dependencies
-├── gradlew                   # Gradle wrapper
-└── src/main/java/...
+project1/
+└── build.gradle  - Uses commons-io:2.7 (vulnerable)
+
+project2/
+└── build.gradle  - Uses jackson-databind:2.13.0 (vulnerable)
 ```
 
 ## Purpose
 
-Tests if Frogbot can detect and fix vulnerabilities in a single-module Gradle project.
+Tests that Frogbot:
+1. Auto-detects both Gradle projects as separate targets
+2. Processes each target independently using IncludeTargets filter
+3. Package handlers only fix files in the current target (not siblings)
+4. Each project gets correct fixes without cross-contamination
 
-## Vulnerable Dependencies
+## Packages Being Tested
 
-- `junit:junit:4.7` (old vulnerable version)
-- `commons-io:commons-io:2.5` (potentially vulnerable)
-
-## Testing
-
-This is a simplified single-module project (was previously multi-module).
-Testing dependency scanning and vulnerability fixing.
+- **commons-io:2.7** (project1) - Has known CVEs, should upgrade to 2.11+
+- **jackson-databind:2.13.0** (project2) - Has known CVEs, should upgrade to 2.13.4+

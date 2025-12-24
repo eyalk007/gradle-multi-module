@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Using old version of jackson-databind with known vulnerabilities
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+}
+
