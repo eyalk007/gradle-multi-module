@@ -10,8 +10,6 @@ repositories {
 }
 
 dependencies {
-    // Using commons-io:2.11.0 
-    implementation 'commons-io:commons-io:2.11.0'
+    // Root has very old commons-io:1.0
+    implementation 'commons-io:commons-io:1.0'
 }
-
-
